@@ -1,0 +1,119 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+<body>
+    
+    <%- include('partials/header')%>
+        <main>
+            <section class="contenedor-general">
+                <div class="contenedor-slider">
+                    <p class="ruta"> Home / VESTIDOS CORTOS / <span>Vestido Travesía</span> </p>
+                    <div class="slider">
+                        <img src="/img/<%= product.image %>">
+                        <div class="contenedor-descripcion">
+                            <div class="titulo">
+                                <h1><%= product.name %></h1>
+                                <i class="fab fa-cc-visa"></i>
+                                <p>6 cuotas sin interés <span>de $ 7.500</span></p>
+                                <p><a href="#">Ver más detalle</a></p>
+                                <hr>
+                            </div>
+                            <div class="colores">
+                                <h2>Descripcion</h2>
+                                <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Et, voluptatem ex natus dolore, nisi molestiae omnis eligendi libero delectus vero officiis, laborum doloremque fugit accusamus adipisci necessitatibus exercitationem
+                                    asperiores! Molestias.</p>
+                                <hr>
+                            </div>
+                            <div class="opciones">
+                                    <label>Colores</label>
+                                    <select name="" id="AMARILLO">
+                                    <option value="">VERDE RETRO</option>
+                                    <option value="L">ROJO MODA</option>
+                                    <option value="">AZUL MARINO</option>
+                                    <option value="">NEGRO</option>
+                                </select>
+                                                    <label>Talle</label>
+                                                    <select name="" id="AMARILLO">
+                                    <option value="">U</option>
+                                    <option value="L">L</option>
+                                    <option value="">A</option>
+                                    <option value="">N</option>
+                                </select>
+                            </div>
+                            <form action="/carrito" method="GET">
+                                <div class="comrpar">
+                                    <div class="cantidad">
+                                        <p class="cantidad-texto">Cantidad: <input type="number" name="contador"></p>
+                                    </div>
+                                    <button type="submit" value="Comprar" class="comprar">Comprar</button>
+                                </div>
+                            </form>
+                            <div class="container-config">
+                            <div class="Configuracion">
+                                <% if(product.status == 'live') { %>
+
+                                <form action="/productos/<%=  product.id %>?_method=DELETE" method="POST">
+                                    <button type="submit">Borrar</button>
+                                </form>
+                                <%}else{ %>
+                                    <form action="/productos/<%=  product.id %>/recover?_method=PUT" method="POST">
+                                        <button type="submit">Recuperar</button>
+                                    </form>
+                                <%} %>
+                            
+                            </div>          
+                            <div class="Configuracion">
+                                <form action="#" method="GET">
+                                    <a href="/productos/edit/<%= product.id %>">Editar</a>
+                                </form>
+                            </div>     
+                            </div>                  
+                    </div>
+                </div>
+                </div>
+            </section>
+            <section class="portafolio">
+                <h3>Recomendado para vos</h3>
+                <div class="portafolio-container">
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado1.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$2.580</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado2.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$3.650</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                    <section class="portafolio-item">
+                        <img src="/img/recomendado3.jpg" alt="" class="portafolio-img">
+                        <section class="portafolio-text">
+                            <h2>Lorem ipsum</h2>
+                            <p>$5.360</p>
+                            <p>6 cuotas sin interés de $1.350.00.</p>
+                            <a href="/carrito"><i class="fas fa-shopping-cart"></i></a>
+                            <a href="/carrito"><i class="fas fa-eye"></i></a>
+                        </section>
+                    </section>
+                </div>
+            </section>
+        </main>
+
+ 
+        <%- include('partials/footer')%>
+
+    </body>
+
+</html>

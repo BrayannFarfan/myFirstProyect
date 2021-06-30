@@ -1,0 +1,38 @@
+<header>
+    <nav>
+        <ul>
+            <li class="logo"><span class="celeste">Vin</span>tage</li>
+            <li class="btn"><span class="fas fa-bars"></span></li>
+            
+            <div class="items">
+                
+                    <li><a href="/users/inicio-sesion">Iniciar Sesión</a></li>
+                <li><a href="/users/registro">Registrarse</a></li>
+                        <li><a href="/">Home</a></li>
+                        <li><a href="/productos/listar">Productos</a></li>
+                        <li><a href="/productos/create">Nuevo</a></li>
+                
+                </div>
+        
+                <form action="procesar.php" method="POST">
+                    <li class="search-icon">
+                        <input type="search" placeholder="Search">
+                        <label>
+                            <button class="icon"><span class="fas fa-search"></span></button>
+                        </label>
+                    </li>
+                </form>
+                <div class="profile-details">
+                    <a href="/users/profile"><img src="/img/imageUser/" alt=""></a>
+            
+                  </div>
+                
+            </ul>
+        <script>
+            $('nav ul li.btn span').click(function() {
+                $('nav ul div.items').toggleClass("show");
+                $('nav ul li.btn span').toggleClass("show");
+            });
+        </script>
+    </nav>
+</header>

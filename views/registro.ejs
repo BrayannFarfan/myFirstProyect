@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+    <body>
+
+        <%- include('partials/header')  %>
+
+            <main class="login2">
+                <section class="inicio-secion2">
+                    <input type="checkbox" id="click">
+                    <label for="click" class="chatsito">
+                <i class="fab fa-facebook-messenger"></i>
+                <i class="fas fa-times"></i>
+            </label>
+                    <div class="box2">
+                        <div class="head-text">
+                            Querés Hablar? - Online</div>
+                        <div class="chat-box">
+                            <div class="desc-text">
+                                Por favor este chat es para uso comercial, no incurra en cualquier tipo de violencia</div>
+                            <form action="#" method="POST" enctype="multipart/form-data">
+                                <div class="field">
+                                    <input type="text" placeholder="Nombre" required>
+                                </div>
+                                <div class="field">
+                                    <input type="email" placeholder="Email" name="imagen" required>
+                                </div>
+                                <div class="field textarea">
+                                    <changeit cols="30" rows="10" placeholder="Explain your queries.." required></changeit>
+                                </div>
+                                <div class="field">
+                                    <button type="submit">Iniciar Chat</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <section class="login">
+                        <form class="formulario" action="/users/registro" method="POST" enctype="multipart/form-data">
+                            <h1>Registrate</h1>
+                            <div class="contenedor">
+                                <% if(locals.errors && errors.nombre){ %>
+                                    <div class="danger">
+                                        <%= errors.nombre.msg %>
+                                    </div>
+                               <% } %>
+                               <div class="input-contenedor">
+                                   <i class="fas fa-user icon"></i>
+                                    <input type="text" placeholder="Nombre y Apellido" name="nombre"> 
+                                    <!--value=" <%= locals.datoIngresado ? datoIngresado.nombre: null %>"-->
+                                </div>
+                                <% if(locals.errors && errors.email){ %>
+                                    <div class="danger">
+                                        <%= errors.email.msg %>
+                                    </div>
+                               <% } %>
+                                <div class="input-contenedor">
+                                    <i class="fas fa-envelope icon"></i>
+                                    <input type="text" name="email" placeholder="Correo Electronico">
+                                    <!--value=" <%= locals.datoIngresado ? datoIngresado.email: null %>"-->
+                                </div>
+                                
+                                <% if(locals.errors && errors.clave){ %>
+                                    <div class="danger">
+                                        <%= errors.clave.msg %>
+                                    </div>
+                               <% } %>
+                                <div class="input-contenedor">
+                                    <i class="fas fa-key icon"></i>
+                                    <input type="password" name="clave" placeholder="Contraseña">  
+                                    <!-- value=" <%= locals.datoIngresado ? datoIngresado.clave: null %>"-->
+                                </div>     
+                                                       
+                                <div class="input-contenedor">
+                                    <i class="fas fa-user"></i>
+                                    <input type="file" name="imagenAvatar" > 
+
+                                </div>
+                                <input type="submit" value="Registrate" class="button">
+                                <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                                <p>¿Ya tienes una cuenta?<a class="link" href="/users/inicio-sesion">Iniciar Sesion</a></p>
+                            </div>
+                        </form>
+                    </section>
+                </section>
+
+            </main>
+    </body>
+
+</html>

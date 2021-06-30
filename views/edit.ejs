@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+            <main>
+                <section class="edicion">
+                <h2>Edición de Producto</h2>
+                <form action="/productos/<%=  product.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+                    <div class="separador">
+                        <label>Nombre</label>
+                        <div class="container-input">
+                            <input type="text" name="name" value="<%= product.name %>">
+                        </div>
+                    </div>
+                    <div class="separador">
+                        <label for="image">Imagen</label>
+                        <div class="container-input">
+                            <input type="file" name="image">
+                            <input type="hidden" name="oldImage" value="<%= product.image %>">
+                        </div>
+                    </div>
+                    <div class="separador">
+                        <label for="price">Precio</label>
+                        <div class="container-input">
+                            <input type="text" name="price" value="<%= product.price %>">
+                        </div>
+                    </div>
+
+                    <div class="separador">
+                        <label for="descuento">descuento</label>
+                        <div class="container-input">
+                            <input type="text" name="descuento" value="<%= product.descuento  %>">
+                        </div>
+                    </div>
+                    <div class="separador">
+                        <div>
+                            <button type="submit">Editar producto</button>
+                        </div>
+                    </div>
+                </form>
+            </section>
+            </main>
+
+
+
+
+
+
+    </body>
+
+
+</html>

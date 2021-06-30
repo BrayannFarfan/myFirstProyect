@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+    <body>
+
+        <%- include('partials/header')%>
+
+            <main>
+                <section class="banner">
+                    <h2>Vestite bien, hoy tenés una cita con el éxito</h2>
+                    <div class="contenedor__padre">
+                        <h3>Sé la primera en enterarte de nuestras novedades</h3>
+                        <form action="#" method="GET" enctype="multipart/form-data">
+                            <div class="contenedor-input">
+                                <input type="text" placeholder="Direccion de correo" class="contenedor-input1">
+                                <input type="submit" value="Enviar" class="contenedor-submit">
+                            </div>
+                        </form>
+                </section>
+                <section class="inicio-secion2">
+                    <input type="checkbox" id="click">
+                    <label for="click" class="chatsito">
+              <i class="fab fa-facebook-messenger"></i>
+              <i class="fas fa-times"></i>
+          </label>
+                    <div class="box2">
+                        <div class="head-text">
+                            Querés Hablar? - Online</div>
+                        <div class="chat-box">
+                            <div class="desc-text">
+                                Por favor este chat es para uso comercial, no incurra en cualquier tipo de violencia</div>
+                            <form action="#" method="GET" enctype="multipart/form-data">
+                                <div class="field">
+                                    <input type="text" placeholder="Nombre" required>
+                                </div>
+                                <div class="field">
+                                    <input type="email" placeholder="Email" required>
+                                </div>
+                                <div class="field textarea">
+                                    <changeit cols="30" rows="10" placeholder="Explain your queries.." required></changeit>
+                                </div>
+                                <div class="field">
+                                    <button type="submit">Iniciar Chat</button>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </section>
+                <section class="mision">
+
+                    <div class="contenedor-mision-padre">
+                        <div class="publi">
+                            <h3>Nuestra Misíon</h3>
+                            <p>Ser el E-comerce numero uno a nivel mundial</p>
+                        </div>
+                        <div class="publi ">
+                            <i class="far fa-credit-card"></i>
+                            <p>1.Tu compra esta segura con nuestros servicios</p>
+                        </div>
+                        <div class="publi">
+                            <i class="fas fa-truck"></i>
+                            <p>2.Envio garantizado por nuestra tienda</p>
+                        </div>
+                        <div class="publi">
+                            <i class="fas fa-map-marker-alt"></i>
+                            <p>3.Encontranos en cualquiera de nuestros punto de venta</p>
+                        </div>
+                    </div>
+                </section>
+
+
+
+                <section class="grilla">
+                    <h2 id="buscado">Lo más buscado</h2>
+                    <div class="container-listado">
+                        <% for( let i = 0; i < 4; i++){%>
+                            <%let productos = product[i]%>
+                            <div class="conte">
+                                <div class="card iron-man">
+                              <a href="/productos/detail/<%= productos.id%>"><img src="/img/<%= productos.image %>"/></a>
+                                </div>
+                                <div class="informacion">
+                                  <h1><%= productos.name %></h1>
+                                </div>
+                                <div class="precio">
+                                  <div class="box-precio">
+                                      <p id="antes">Antes $<%= productos.price %></p>
+                                      <p>Ahora $<%= productos.price - productos.descuento %></p>
+                                      <p>Descuento del <%= Math.round(productos.descuento * 100 / productos.price) %>%</p>
+                                  </div>
+                                  <a href="#"><i class="fas fa-shopping-bag"></i></a>
+                                </div>
+                              </div>
+                              <% }%>
+                        
+                            
+                    </div>
+                </section>
+
+
+
+
+
+                
+                <section class="publicidad">
+                    <h4>PROXIMAMENTE</h4>
+                    <div class="wrap">
+                        <div class="tarjeta-wrap">
+                            <div class="tarjeta">
+                                <div class="adelante card1"></div>
+                                <div class="atras">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tarjeta-wrap">
+                            <div class="tarjeta">
+                                <div class="adelante card2"></div>
+                                <div class="atras">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="tarjeta-wrap">
+                            <div class="tarjeta">
+                                <div class="adelante card3"></div>
+                                <div class="atras">
+                                    <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit. Ipsa ex velit beatae. Illum, suscipit, aspernatur!</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </section>
+            </main>
+
+            <%- include('partials/footer')%>
+
+    </body>
+
+</html>

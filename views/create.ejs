@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<%- include('partials/head') %>
+
+    <body>
+
+        <%- include('partials/header') %>
+
+        <main>
+            <section class="conteiner-formulario">
+                <h2 class="altaProducto">Alta de Producto</h2>
+                    <form class="container-form" name="image" action="/productos/store" method="POST" enctype="multipart/form-data" >
+                        <div class="separador">     
+                            <label for="name">Nombre</label>
+                            <div class="container-input">
+                                <input type="text" name="name">
+                            </div>
+                         
+                        </div>
+
+                        <div class="separador">
+                            <label for="image">Imagen</label>
+                            <div class="container-input">
+                                <input type="file" name="image">
+                            </div>
+                        </div>
+
+                        <div class="separador">
+                            <label for="price">Precio</label>
+                            <div class="container-input">
+                                <input type="text" name="price">
+                            </div>
+                        </div>
+
+                        <div class="separador">
+                            <label for="descuento">descuento</label>
+                            <div class="container-input">
+                                <input type="text" name="descuento">
+                            </div>
+                        </div>
+
+                        <div class="separador">
+                            <div class="container-input">
+                                <button type="submit" class="crear">Crear producto</button>
+                            </div>
+                        </div>
+                    </form>
+
+
+
+
+
+    </body>
+</html>

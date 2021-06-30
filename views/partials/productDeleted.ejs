@@ -1,0 +1,16 @@
+<div class="conte">
+  <div class="card iron-man">
+<a href="/productos/detail/<%= productos.id%>"><img src="/img/<%= productos.image %>"/></a>
+  </div>
+  <div class="informacion">
+    <h1><%= productos.name %></h1>
+  </div>
+  <div class="precio">
+    <div class="box-precio">
+        <p id="antes">Antes $<%= productos.price %></p>
+        <p>Ahora $<%= productos.price - productos.descuento %></p>
+        <p>Descuento del <%= Math.round(productos.descuento * 100 / productos.price) %>%</p>
+    </div>
+    <a href="#"><i class="fas fa-shopping-bag"></i></a>
+  </div>
+</div>

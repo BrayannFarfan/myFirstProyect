@@ -1,0 +1,74 @@
+[
+ {
+  "name": "REMERA PERLA",
+  "price": "500",
+  "descuento": "100",
+  "id": "1",
+  "image": "grilla1.jpg",
+  "status": "live"
+ },
+ {
+  "name": "KIMONO",
+  "price": "600",
+  "descuento": "15",
+  "id": "2",
+  "image": "grilla2.jpg",
+  "status": "live"
+ },
+ {
+  "name": "VESTIDO",
+  "price": "800",
+  "descuento": "100",
+  "id": "3",
+  "image": "grilla3.jpg",
+  "status": "live"
+ },
+ {
+  "name": "CAMPERA",
+  "price": "1600",
+  "descuento": "100",
+  "id": "4",
+  "image": "grilla4.jpg",
+  "status": "live"
+ },
+ {
+  "name": "ENTERITO",
+  "price": "850",
+  "descuento": "100",
+  "id": "5",
+  "image": "grilla5.jpg",
+  "status": "live"
+ },
+ {
+  "name": "FALDA",
+  "price": "750",
+  "descuento": "100",
+  "id": "6",
+  "image": "grilla6.jpg",
+  "status": "live"
+ },
+ {
+  "name": "VESTIDO CRUSHE",
+  "price": "2500",
+  "descuento": "100",
+  "id": "7",
+  "image": "grilla7.jpg",
+  "status": "deleted"
+ },
+ {
+  "name": "PANTALONES",
+  "price": "15005",
+  "descuento": "100",
+  "id": "8",
+  "image": "grilla8.jpg",
+  "status": "live"
+ },
+ {
+  "name": "REMERAS",
+  "price": "650",
+  "descuento": "100",
+  "id": "9",
+  "image": "grilla9.jpg",
+  "status": "live"
+ }
+]

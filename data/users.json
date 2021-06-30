@@ -1,0 +1,37 @@
+[
+ {
+  "id": 1,
+  "nombre": "Robert Dawley Jr",
+  "email": "brayann.fave@gmail.com",
+  "clave": "$2a$10$Bspd14/2Zoz6XRCG7Y4mrOkim8B4Icw408rBjnP0iD2VsMC6uSojO",
+  "imageUsuario": "usuario1621656813682.jpg"
+ },
+ {
+  "id": 2,
+  "nombre": "wekjfnwe",
+  "email": "efwkjnwef@gmail.com",
+  "clave": "$2a$10$/CgUJ7vbmg0hv6NQp6I8FeGod372iF9PldzJjgf7EwXJfIDE.EgYC",
+  "imageUsuario": "index.png"
+ },
+ {
+  "id": 3,
+  "nombre": "Robert Dawley Jr",
+  "email": "braaas@gmail",
+  "clave": "$2a$10$R87a2D0xBmH449941biEpOjqhEEwIZqk/wbKOu3JBNOTW2mdrWTBq",
+  "imageUsuario": "smiling-young-female-doctor-wearing-medical-robe-with-stethoscope-points-side-isolated-pink-wall-with-copy-space.jpg"
+ },
+ {
+  "id": 4,
+  "nombre": "Robert Dawley Jr",
+  "email": "robetb@gmail.com",
+  "clave": "$2a$10$LMd1O29isQiNMNl.ZDH.CuNfxmFeQVhJZ8TtBxVbC1lwblRkrO3sm",
+  "imageUsuario": "smiling-young-female-doctor-wearing-medical-robe-with-stethoscope-points-side-isolated-pink-wall-with-copy-space.jpg"
+ },
+ {
+  "id": 5,
+  "nombre": "loca",
+  "email": "abigail@gmaio.com",
+  "clave": "$2a$10$lkUtXNsGBiNsAlvYrb2XNesSl1JOhisw7oaAELx6.QcExV.lhTNNe",
+  "imageUsuario": "doctor-nurses-special-equipment.jpg"
+ }
+]

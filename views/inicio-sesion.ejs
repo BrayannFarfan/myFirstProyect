@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<%- include('partials/head')%>
+
+    <body>
+        <%- include('partials/header')%>
+        <main class="login2">
+            <section class="inicio-secion2">
+                <input type="checkbox" id="click">
+                <label for="click" class="chatsito">
+                <i class="fab fa-facebook-messenger"></i>
+                <i class="fas fa-times"></i>
+            </label>
+                <div class="box2">
+                    <div class="head-text">
+                        Querés Hablar? - Online</div>
+                    <div class="chat-box">
+                        <div class="desc-text">
+                            Por favor este chat es para uso comercial, no incurra en cualquier tipo de violencia</div>
+                        <form action="#" method="GET" enctype="multipart/form-data">
+                            <div class="field">
+                                <input type="text" placeholder="Nombre" required>
+                            </div>
+                            <div class="field">
+                                <input type="email" placeholder="Email" required>
+                            </div>
+                            <div class="field textarea">
+                                <changeit cols="30" rows="10" placeholder="Explain your queries.." required></changeit>
+                            </div>
+                            <div class="field">
+                                <button type="submit">Iniciar Chat</button>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+                <section class="login">
+                    <form class="formulario" action="/users/inicio-sesion" method="POST">
+                        <div class="contenedor-login">
+                            <h1>Login</h1>
+                            <% if(locals.errors && errors.email){ %>
+                                <div class="danger">
+                                    <%= errors.email.msg %>
+                                </div>
+                           <% } %>
+                            <div class="input-contenedor">
+                                <i class="fas fa-envelope icon"></i>
+                                <input type="text" placeholder="Correo Electronico" name="email">
+
+                            </div>
+                            <% if(locals.errors && errors.clave){ %>
+                                <div class="danger">
+                                    <%= errors.clave.msg %>
+                                </div>
+                           <% } %>
+                            <div class="input-contenedor">
+                                <i class="fas fa-key icon"></i>
+                                <input type="password" placeholder="Contraseña" name="clave">
+                            </div>
+                            <div class="container-recordame">
+                                <input type="checkbox" id="" name="recordame" >
+                                <label for="" class="recordame">Recordame</label>
+                            </div>
+                            <input type="submit" value="IniciarSeción" class="button">
+                            <p>Al registrarte, aceptas nuestras Condiciones de uso y Política de privacidad.</p>
+                            <p>¿No tienes una cuenta? <a class="link" href="/users/registro">Registrate </a></p><p><a href="#">Recuperar Contraseña</a></p>
+                        </div>
+                    </form>
+                </section>
+            </section>
+
+        </main>
+    </body>
+
+</html>

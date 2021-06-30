@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <link rel="stylesheet" href="/css/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300&display=swap" rel="stylesheet">
+    <script src="https://kit.fontawesome.com/88225b2944.js" crossorigin="anonymous"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" />
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Vintage | descripcion del producto</title>
+</head>
+
+<body>
+    <header>
+        <nav>
+            <ul>
+                <li class="logo"><span class="celeste">Vin</span>tage</li>
+                <li class="btn"><span class="fas fa-bars"></span></li>
+                <div class="items">
+                    <li><a href="/">Home</a></li>
+                    <li><a href="#">Productos</a></li>
+                    <li><a href="/registro">Registrate</a></li>
+                    <li><a href="/inicio-sesion">Ingresar</a></li>
+                    <li><a href="/carrito"><i class="fas fa-shopping-cart"></i></a></li>
+                </div>
+                <form action="procesar.php" method="POST">
+                    <li class="search-icon">
+                        <input type="search" placeholder="Search">
+                        <label>
+                            <button class="icon"><span class="fas fa-search"></span></button>
+                        </label>
+                    </li>
+                </form>
+            </ul>
+            <script>
+                $('nav ul li.btn span').click(function () {
+                    $('nav ul div.items').toggleClass("show");
+                    $('nav ul li.btn span').toggleClass("show");
+                });
+            </script>
+        </nav>
+    </header>
+
+    <main>
+        <section class="contenedor-general">
+            <section class="contenedor-carrito">
+                <form action="" method="GET" enctype="multipart/form-data">
+                    <div class="contenedor-uno">
+                        <h1>Datos de contacto</h1>
+                        <div>
+                            <input type="email" placeholder="E-mail" required>
+                        </div>
+                        <div>
+                            <p>¿Ya tenés una cuenta?</p><a href="/inicio-sesion">iniciar sesión</a>
+                        </div>
+                    </div>
+                    <div class="contenedor-dos">
+                        <h2>Entrega</h2>
+                        <span>Pais</span>
+                        <div class="contenedor-tres">
+                            <select name="pais" id="">
+                                <option value="">Argentina</option>
+                                <option value="">Brazil</option>
+                                <option value="">Peru</option>
+                                <option value="">Mexico</option>
+                                <option value="">Uruguay</option>
+                                <option value="">Paraguay</option>
+                                <option value="">Chile</option>
+                            </select>
+                        </div>
+                        <div class="contenedor-cuatro">
+                            <input type="text" placeholder="Código Postal" class="postal">
+                        </div>
+                        <div class="contenedor-cinco">
+                            <input type="submit" value="Continuar">
+                        </div>
+                    </div>
+                </form>
+            </section>
+            <section class="contenedor-total">
+                <div class="contenedor-precio">
+                    <div>
+                        <h3>CHI21632 Vestido TRAVESÍA</h3>
+                        <p>$5.260</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Subtotal</p>
+                        <p>$5.260</p>
+                        <hr>
+                    </div>
+                    <div>
+                        <p>Total</p>
+                        <p>$5.260</p>
+                        <hr>
+                    </div>
+                    <i class="fas fa-tag"></i><a href="#">¿Tenés un cupon de descuento?</a>
+                </div>
+            </section>
+        </section>
+    </main>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+</body>
+
+</html>
